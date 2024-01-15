@@ -42,9 +42,9 @@
     </div>
     <div class="title-container">
         <div class="content-box">
-            <div class="title-box">
-                <h1 class="title">
-                    Experience modern apartmans in city of <a class="rijeka-link" href="https://www.rijeka.hr/" target="_blank"><span class='rijeka' style="color:aqua">Rijeka.</span></a>
+            <div class="title-box animate-on-scroll" id="animatedText">
+                <h1 class="title" >
+                    Experience modern apartmans in city of <a class="rijeka-link" href="https://www.rijeka.hr/" target="_blank"><span class='rijeka' style="color:rgb(97, 129, 235);">Rijeka.</span></a>
                 </h1>
             </div>
             <div class="color-div">
@@ -55,11 +55,38 @@
             </div>
         </div>
     </div>
-    <div class="apartmants">
+    <div class="apartmants" style="margin-top: 110px">
         1
     </div>
     <footer>
         <div>1</div>
     </footer>
+    <script>
+    // Target element
+    let animatedText1 = document.getElementById('animatedText');
+    let animatedText2 = document.getElementById('animatedText2')
+
+    // Intersection Observer options
+    let options = {
+      threshold: 0.7
+    };
+
+    // Intersection Observer callback
+    function handleIntersection(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+          observer.unobserve(entry.target); // Optional: stop observing once animation is triggered
+        }
+      });
+    }
+
+    // Create Intersection Observer
+    let observer = new IntersectionObserver(handleIntersection, options);
+
+    // Start observing the target element
+    observer.observe(animatedText1);
+    observer.observe(animatedText2);
+  </script>
 </body>
 </html>
