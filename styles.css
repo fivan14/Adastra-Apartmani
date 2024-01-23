@@ -178,7 +178,7 @@ nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    overflow: hidden;
+    margin-top: 100px;
 }
 
 .content-box {
@@ -219,6 +219,11 @@ nav {
     height: 400px;
     min-width: 250px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.3s ease;
+}
+
+.image-div:hover {
+    transform: scale(1.5);
 }
 
 .animated-image {
@@ -237,14 +242,57 @@ nav {
     border-radius: 50px;
     translate: -100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: transform 0.3s ease;
+}
+
+.color-div:hover {
+    transform: scale(1.5);
 }
 
 
+.slider-text {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    flex-wrap: wrap-reverse;
+    width: 90%;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    
+}
+
+.swiper {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: auto;
+    width: 50%;
+    border-radius: 50px;
+    max-width: 700px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    min-width: 300px;
+    align-items: center;
+}
 
 
-.apartmants {
-    height: 300px;
+.swiper-wrapper {
+    border-radius: 50px;
+}
+
+.swiper-slide {
+    border-radius: 50px;
+}
+
+.photo {
     width: 100%;
+  height: 100%;
+  object-fit: cover; /* Cover the container */
+  object-position: center bottom; /* Align to center bottom */
+}
+
+
+.helper-text {
+    width: 50%;
 }
 
 #backToTopBtn {
@@ -288,6 +336,9 @@ footer {
         font-size: 60px;
         line-height: 55px;
     }
+    .slider-text {
+        width: 95%;
+    }
 }
 
 @media screen and (max-width: 1000px) {
@@ -318,7 +369,7 @@ footer {
         font-size: 60px;
         line-height: 55px;
     }
-    .image-div {
+    .image-div, .swiper {
         width: 85%;
         height: 300px;
         z-index: 998;
@@ -326,6 +377,10 @@ footer {
     .color-div {
         translate: -50%;
         margin-top: -80px;
+    }
+
+    .swiper {
+        width: 80%;
     }
 }
 
@@ -396,3 +451,9 @@ footer {
       opacity: 1;
       transform: translateY(0);
     }
+
+
+.animate-on-scroll.animate:hover {
+     transform: scale(1.1);
+}
+

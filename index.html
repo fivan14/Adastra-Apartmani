@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -58,14 +59,43 @@
             </div>
         </div>
     </div>
-    <div class="apartmants" style="margin-top: 110px">
-        1
+    <div class="slider-text">
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide one">
+            <img class="photo" src="slike/apartman1/IMG_8210-HDR-Edit.JPG" alt="" height="400px">
+          </div>
+          <div class="swiper-slide two">
+            <img src="slike/apartman2/IMG_5939-Edit.JPG" alt="" class="photo" height="400px">
+          </div>
+          <div class="swiper-slide three">
+            <img class="photo" src="slike/apartman1/IMG_8194-HDR-Edit.JPG" alt="" class="photo" height="400px">
+          </div>
+        </div>
+        
+      </div>
+          <div class="title-box">
+            <h1 class="title" >
+                    Experience modern apartmans in city of <a class="rijeka-link" href="https://www.rijeka.hr/" target="_blank"><span class='rijeka' style="color:rgb(97, 129, 235);">Rijeka.</span></a>
+                </h1>
+          </div>
     </div>
+
+
     <img src="slike/top.png" id="backToTopBtn" onclick="scrollToTop()">
     <footer>
         <div>1</div>
     </footer>
-    <script>
+
+    <!--Swiper.js swipe -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!--Observer-->
+
+<script>
     // Target element
     let animatedText1 = document.getElementById('animatedText');
     let animatedText2 = document.getElementById('animatedText2')
