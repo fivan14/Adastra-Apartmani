@@ -245,33 +245,45 @@ nav {
     transition: transform 0.3s ease;
 }
 
+/* 
 .color-div:hover {
     transform: scale(1.5);
+} */
+
+.slider-main {
+    overflow-y: visible;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 100%;
+    margin-top: 150px;
+    margin-bottom: 150px;
 }
 
-
-.slider-text {
+.slider-container {
+    overflow-y: visible;
+    overflow-x: hidden;
     display: flex;
     justify-content: space-between;
     height: auto;
+    gap: 30px;
     flex-wrap: wrap-reverse;
     width: 90%;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    
+    max-width: 1440px;
+    padding: 15px;
 }
 
 .swiper {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
-    height: auto;
-    width: 50%;
     border-radius: 50px;
-    max-width: 700px;
+    width: 40%;
+    height: 400px;
+    min-width: 250px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    min-width: 300px;
-    align-items: center;
 }
 
 
@@ -290,10 +302,28 @@ nav {
   object-position: center bottom; /* Align to center bottom */
 }
 
-
-.helper-text {
-    width: 50%;
+.color-div-two {
+    position: absolute;
+    flex-grow: 1;
+    width: 80%;
+    height: 400px;
+    background-color:rgb(247, 177, 47);
+    border-radius: 50px;
+    translate: 80%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
+.circle {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    margin-top: -300px;
+    margin-right: 20%;
+    background-color: rgb(247, 177, 47);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+
 
 #backToTopBtn {
     width: 40px;
@@ -326,7 +356,7 @@ footer {
         width: 95%;
     }
 
-    .content-box {
+    .content-box, .slider-container {
         width: 95%;
     }
     .title-box {
@@ -335,9 +365,6 @@ footer {
     .title {
         font-size: 60px;
         line-height: 55px;
-    }
-    .slider-text {
-        width: 95%;
     }
 }
 
@@ -353,7 +380,9 @@ footer {
         font-size: 55px;
         line-height: 50px;
     }
-    
+    .slider-container {
+        gap: 0px;
+    }
 }
 
 @media screen and (max-width: 710px) {
@@ -378,9 +407,12 @@ footer {
         translate: -50%;
         margin-top: -80px;
     }
-
-    .swiper {
-        width: 80%;
+    .color-div-two {
+        translate: 40%;
+        margin-bottom: 100px;
+    }
+    .circle {
+        display: none;
     }
 }
 
@@ -408,7 +440,7 @@ footer {
         display: block;
     }
 
-    .content-box {
+    .content-box, .slider-container {
         width: 100%;
     }
     .title-box {
